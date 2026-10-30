@@ -34,7 +34,7 @@ export async function isOllamaAvailable() {
 export async function generateJsonCompletion(prompt, systemPrompt = '') {
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 15000); // 15s max for local LLM
+    const timeout = setTimeout(() => controller.abort(), 35000); // 35s max for local LLM cold starts
 
     const body = {
       model: OLLAMA_MODEL,
