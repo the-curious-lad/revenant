@@ -54,7 +54,8 @@ export const DETECTORS = {
 
       if (globalContainers.length > 0) {
         for (const item of globalContainers) {
-          const clearPattern = new RegExp(`(${item.varName}\\.clear|memset\\s*\\(\\s*${item.varName})`);
+          // Matches: adj.clear(), adj[i].clear(), memset(adj, ...), fill(adj, ...), adj[i] = false/0
+          const clearPattern = new RegExp(`(${item.varName}(\\[[^\\]]+\\])?\\.clear|memset\\s*\\(\\s*${item.varName}|fill\\s*\\([^,]*${item.varName}|${item.varName}\\[[^\\]]+\\]\\s*=\\s*(false|0))`);
           if (!clearPattern.test(code)) {
             return {
               matched: true,
