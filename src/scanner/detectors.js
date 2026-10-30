@@ -10,7 +10,7 @@ export const DETECTORS = {
       const lines = code.split('\n');
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
-        if (/\bint\s+(sum|ans|total|product|res|acc)\s*=\s*[0-9]/.test(line)) {
+        if (/\bint\s+(sum|ans|total|product|res|acc|cost|c|cnt)\s*=\s*[0-9]/.test(line)) {
           return {
             matched: true,
             line: i + 1,
