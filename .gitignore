@@ -1,0 +1,7 @@
+node_modules/
+.env
+.revenant_local_store.json
+*.exe
+*.out
+*.log
+.DS_Store

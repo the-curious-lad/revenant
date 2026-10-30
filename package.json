@@ -1,0 +1,31 @@
+{
+  "name": "revenant",
+  "version": "0.1.0",
+  "description": "Ghost in the Machine: Error-memory developer tool that remembers how you fail",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "ghost": "./bin/ghost.js"
+  },
+  "scripts": {
+    "test": "node --test test/**/*.test.js"
+  },
+  "keywords": [
+    "hacktoberfest",
+    "ghost-in-the-machine",
+    "cli",
+    "competitive-programming",
+    "developer-tool",
+    "mongodb-atlas",
+    "gemma"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "cli-table3": "^0.6.5",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.9.0"
+  }
+}
