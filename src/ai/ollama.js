@@ -97,7 +97,7 @@ export async function generateJsonCompletion(prompt, systemPrompt = '') {
 export async function generateEmbedding(text) {
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 5000);
+    const timeout = setTimeout(() => controller.abort(), 25000); // 25s for embedding model cold load
 
     const res = await fetch(`${OLLAMA_HOST}/api/embeddings`, {
       method: 'POST',
