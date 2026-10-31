@@ -3,7 +3,7 @@
  * with realistic mistake distributions (repeated personal blind spots)
  * to benchmark the 70/30 backtest.
  */
-export function generateBenchmarkDataset() {
+export function generateBenchmarkDataset(totalRuns = 100) {
   const problems = [
     { title: 'Prefix Sum Max', defaultSin: 'int_overflow' },
     { title: 'Graph BFS Traversal', defaultSin: 'unreset_global_state' },
@@ -20,8 +20,8 @@ export function generateBenchmarkDataset() {
   const runs = [];
   const baseDate = new Date('2026-10-01T10:00:00Z').getTime();
 
-  // Generate 50 realistic chronological runs
-  for (let i = 0; i < 50; i++) {
+  // Generate realistic chronological runs (default 100 runs for robust statistical power)
+  for (let i = 0; i < totalRuns; i++) {
     const prob = problems[i % problems.length];
     const timestamp = new Date(baseDate + i * 14 * 3600 * 1000).toISOString();
 

@@ -58,26 +58,26 @@ To prove that REVENANT is not AI snake oil, we include a reproducible benchmark 
 
 ```text
   REVENANT 70/30 EMPIRICAL BACKTEST REPORT
-  Chronological Split: 35 training runs (70%) | 15 evaluation runs (30%)
+  Chronological Split: 70 training runs (70%) | 30 evaluation runs (30%)
 
   Confusion Matrix:
-    - True Positives  (Prevented Failures): 6
+    - True Positives  (Prevented Failures): 13
     - False Positives (False Alarms):       0
-    - False Negatives (Missed Failures):    2
-    - True Negatives  (Clean Runs):         7
+    - False Negatives (Missed Failures):    3
+    - True Negatives  (Clean Runs):         14
 
 ┌──────────────────────┬──────────────┬──────────────────────────────────────────────┐
 │ Metric               │ Result       │ Benchmark Meaning                            │
 ├──────────────────────┼──────────────┼──────────────────────────────────────────────┤
 │ Precision            │ 100%         │ When warned, code would have genuinely failed│
 ├──────────────────────┼──────────────┼──────────────────────────────────────────────┤
-│ Recall               │ 75.0%        │ Proportion of actual failures caught pre-run │
+│ Recall               │ 81.3%        │ Proportion of actual failures caught pre-run │
 ├──────────────────────┼──────────────┼──────────────────────────────────────────────┤
 │ False Alarm Rate     │ 0.0%         │ Passing code wrongly flagged (<10% is gold)  │
 ├──────────────────────┼──────────────┼──────────────────────────────────────────────┤
-│ F1 Score             │ 85.7%        │ Harmonic mean of precision and recall        │
+│ F1 Score             │ 89.7%        │ Harmonic mean of precision and recall        │
 ├──────────────────────┼──────────────┼──────────────────────────────────────────────┤
-│ Overall Accuracy     │ 86.7%        │ Total correct classifications                │
+│ Overall Accuracy     │ 90.0%        │ Total correct classifications                │
 └──────────────────────┴──────────────┴──────────────────────────────────────────────┘
 ```
 
