@@ -8,6 +8,7 @@
     "ghost": "./bin/ghost.js"
   },
   "scripts": {
+    "start": "node src/server.js",
     "test": "node --test test/**/*.test.js"
   },
   "keywords": [

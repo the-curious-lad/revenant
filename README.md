@@ -147,6 +147,23 @@ ghost backtest
 ```
 Replays submissions chronologically to generate empirical Precision, Recall, and False Alarm rates.
 
+### 5. Launch the Webhook / Web Dashboard Server (Render-Ready)
+```bash
+npm start
+```
+Spins up the HTTP service on port 3000 (or `$PORT` on Render) serving the live dark-themed Graveyard dashboard and JSON APIs (`/api/ghosts`, `/health`).
+
+---
+
+## ☁️ Deploy to Render in 1 Click
+
+REVENANT includes an official [`render.yaml`](./render.yaml) Blueprint:
+
+1. Fork or push this repository to GitHub.
+2. In your [Render Dashboard](https://dashboard.render.com/), select **New** $\rightarrow$ **Blueprint**.
+3. Connect your repository. Render automatically reads `render.yaml`, spins up a Node.js web service, and sets up health checking on `/health`.
+4. Add your `MONGODB_URI` environment variable in the Render dashboard, and your live cloud Graveyard is active!
+
 ---
 
 ## 🧪 Running Unit Tests
